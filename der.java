@@ -103,10 +103,6 @@ class Mul_exp {
 					System.out.printf("%d", coe);
 			while(kind>0){
 				if((kind&1)==1){
-//					System.out.printf("%c",p+'a');
-//					if(ver_pow[p]>1)
-//						System.out.printf("^%d",ver_pow[p]);
-//					flag=true;
 					for(int j=1;j<=ver_pow[p];j++)
 					{
 						System.out.printf("*%c",p+'a');
@@ -188,7 +184,6 @@ static void Merge(Mul_exp T[], int size){			//合并同类项
 				if(T[j].getcoe()!=0)
 					if(T[i].operator(T[i],T[j])){			//判断是否同类项 
 						T[i].add_coe(T[j].getcoe());
-//							T[j].add_coe(-T[j].getcoe());
 						T[j].coe=0;
 
 					}
